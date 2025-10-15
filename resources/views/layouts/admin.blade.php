@@ -1,3 +1,4 @@
+@props(['breadcrumbs'=>[]])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -20,10 +21,11 @@
         @include('layouts.includes.admin.navigation')
         @include('layouts.includes.admin.sidebar')
         <div class="p-4 sm:ml-64">
-            <!--Margin top 14px-->
-            <div class= "mt-14">
-                {{$slot}}
+            <!-- Añadiendo margen superior-->
+            <div class= "mt-14 flex items-center justify-between w-full">
+                @include('layouts.includes.admin.breadcrumb')
             </div>
+            {{$slot}}
         </div>
         @stack('modals')
         @livewireScripts
