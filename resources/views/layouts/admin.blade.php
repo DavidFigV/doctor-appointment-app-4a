@@ -16,7 +16,10 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/6f74026cec.js" crossorigin="anonymous"></script>
+        <!-- SweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- WireUI -->
         <wireui:scripts />
         <!-- Styles -->
@@ -41,5 +44,11 @@
         @stack('modals')
         @livewireScripts
         <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        {{-- Mostrar Sweet Alert --}}
+        @if (session('swal'))
+            <script>
+                Swal.fire(@json(session('swal')));
+            </script>
+        @endif
     </body>
 </html>
