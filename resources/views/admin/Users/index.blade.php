@@ -11,6 +11,6 @@
 
     <x-wire-card>
         <p class="text-gray-600">Aquí se mostrará la tabla de usuarios.</p>
-        {{-- En el futuro aquí irá: @livewire('admin.datatables.user-table') --}}
+        @livewire('admin.datatables.user-table')
     </x-wire-card>
 </x-admin-layout>
