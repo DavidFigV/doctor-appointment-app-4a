@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\BloodType;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,7 +15,8 @@ class DatabaseSeeder extends Seeder
         //LLamar al RoleSeeder creado
         $this->call([
             RoleSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            BloodType::class
         ]);
     }
 }
