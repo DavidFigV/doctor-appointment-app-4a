@@ -27,6 +27,12 @@
             'icon' => 'fa-solid fa-user-injured',
             'href' => route('admin.patients.index'),
             'active' => request()->routeIs('admin.patients.*')
+        ],
+        [
+            'name' => 'Aseguradoras',
+            'icon' => 'fa-solid fa-shield-halved',
+            'href' => route('admin.insurances.index'),
+            'active' => request()->routeIs('admin.insurances.*')
         ]
     ];
 @endphp
