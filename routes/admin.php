@@ -10,7 +10,7 @@ Route::get('/', function (){
    return view('admin.dashboard');
 })->name('dashboard');
 
-//Gestión dee Roles
+// Role Manage
 Route::resource('roles', RoleController::class);
 
 // Gestión de Usuarios
