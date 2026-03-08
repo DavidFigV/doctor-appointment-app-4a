@@ -3,13 +3,14 @@
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PatientController;
+use App\Http\Controllers\Admin\InsuranceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function (){
    return view('admin.dashboard');
 })->name('dashboard');
 
-//Gestión dee Roles
+// Role Manage
 Route::resource('roles', RoleController::class);
 
 // Gestión de Usuarios
@@ -17,3 +18,7 @@ Route::resource('users', UserController::class);
 
 // Gestión de Pacientes
 Route::resource('patients', PatientController::class);
+
+// Directorio de Aseguradoras
+Route::resource('insurances', InsuranceController::class)->only(['index', 'create', 'store']);
+
